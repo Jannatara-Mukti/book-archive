@@ -5,14 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api-Assignment</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Internal CSS  -->
+    <style>
+        body{
+            margin: 20px;
+        }
+        .card{
+            border-radius: 50px;
+        }
+        #spinner{
+            display: none;
+        }
+     </style>
 </head>
 <body>
-    <!-- Search Book  -->
+    <!-- Search Book - Input and Button  -->
     <h2 class="text-center pt-5 text-success">Search the Book You want</h2>
     <div class="input-group mb-3 mt-4 w-50 mx-auto">
         <input id="search-field" type="text" class="form-control" placeholder="Search Book Here" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button onclick="searchBook()" class="btn btn-outline-secondary" type="button" id="button-search">Search Books</button>
+    </div>
+    <!-- Spinner -->
+    <div class="d-flex justify-content-center m-3">
+        <div class="spinner-border text-success" id="spinner" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Seaech Result will be shown here  -->
+    <div id="book-result">
+        <!-- Book Number Shown  -->
+        <div id="total-books" class="text-success text-center">
+
+        </div>
+        <!-- error Message -->
+        <div id="error">
+
+        </div>
+
+        <!-- Books Container -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="book-container">
+           
+        </div>
+
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" ></script>
