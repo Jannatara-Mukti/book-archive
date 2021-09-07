@@ -5,6 +5,8 @@ const searchBook = () => {
     if(searchText === ''){
         const error = document.getElementById('error');
         error.innerText = "Search Field can not be empty";
+        const bookContainer = document.getElementById("book-container");
+        bookContainer.textContent = '';
         return;
     }
     searchField.value = '';
